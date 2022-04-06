@@ -1,6 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerMotor))]
@@ -22,6 +20,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Check whether we are hovering over UI
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
         //Left mouse button
         if(Input.GetMouseButtonDown(0))
         {
