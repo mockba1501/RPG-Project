@@ -36,7 +36,7 @@ public class PlayerMotor : MonoBehaviour
         //To correct the rotation of the player while inside the radius of the interactable
         agent.updateRotation = false;
 
-        target = newTarget.transform;
+        target = newTarget.interactionTransform;
     }
 
     public void StopFollowingTarget()
