@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
 
     #endregion
 
+    //Events to be triggered in case an item is added or removed: used in InventoryUI to update the UI
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallBack;
     //Set a limited space to the inventory
